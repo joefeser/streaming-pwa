@@ -21,3 +21,8 @@ self.addEventListener('push', (event) => {
 });
 
 self.workbox.precaching.precacheAndRoute([]);
+
+// Service Worker Active
+self.addEventListener('activate', function(event){
+  console.log('activated!');
+});
