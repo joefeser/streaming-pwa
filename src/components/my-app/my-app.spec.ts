@@ -7,6 +7,10 @@ describe('my-app', () => {
     await window.flush();
   });
 
+  it('should have an element', async () => {
+    expect(element).toBeTruthy();
+  });
+
   let element: HTMLAppProfileElement;
   let window: TestWindow;
   beforeEach(async () => {

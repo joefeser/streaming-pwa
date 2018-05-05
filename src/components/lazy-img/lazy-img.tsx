@@ -4,7 +4,7 @@ import { Component, Element, Event, EventEmitter, Prop, State } from '@stencil/c
   You can use this component to lazy load below the fold images to improve load time.
   Below the fold images are images that are not seen by the user until they have started to scroll.
   Instead of loading all these images up front before the user even sees them, which will eat up
-  network bandwith, we can use this component to put off loading these images until the user has
+  network bandwidth, we can use this component to put off loading these images until the user has
   scrolled to where that image is in your PWA.
   To use this component use the following markup: <lazy-img src={/path/to/img} alt={alt text for img}></lazy-img>
 */
@@ -83,7 +83,7 @@ export class LazyImg {
 
   render() {
     return (
-      <img ref={(el) => this.image = el as HTMLImageElement} data-src={this.src} alt={this.alt} width={this.width}></img>
+      <img ref={(el) => this.image = el as HTMLImageElement} data-src={this.src} alt={this.alt} width={this.width} />
     );
   }
 }
