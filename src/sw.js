@@ -1,7 +1,11 @@
-importScripts('workbox-v3.0.0-alpha.6/workbox-sw.js')
+importScripts('workbox-v3.2.0/workbox-sw.js');
+//importScripts('https://storage.googleapis.com/workbox-cdn/releases/3.2.0/workbox-sw.js');
 
 self.workbox.skipWaiting();
 self.workbox.clientsClaim();
+
+
+console.log("SW Startup!");
 
 /*
   This is our code to handle push events.
@@ -23,6 +27,6 @@ self.addEventListener('push', (event) => {
 self.workbox.precaching.precacheAndRoute([]);
 
 // Service Worker Active
-self.addEventListener('activate', function(event){
-  console.log('activated!');
+self.addEventListener('activate', (event) => {
+  console.log(`activated! ${event.data.text()}`);
 });
